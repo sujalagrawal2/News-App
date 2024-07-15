@@ -41,9 +41,9 @@ class GeneralNewsFragment : Fragment() {
 
     private fun fetchNews() {
         val country = arguments?.getString(COUNTRY)
-        val language = arguments?.getString(BussinessNewsFragment.LANGUAGE)
-        val search = arguments?.getString(BussinessNewsFragment.SEARCH)
-        val maxLine = arguments?.getString(BussinessNewsFragment.MAXLINE).toString().toInt()
+        val language = arguments?.getString(LANGUAGE)
+        val search = arguments?.getString(SEARCH)
+        val maxLine = arguments?.getString(MAXLINE).toString().toInt()
         lifecycleScope.launch {
             try {
                 val response = withContext(Dispatchers.IO) {
