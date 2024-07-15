@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvTopNews"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="General News"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clChangeTopic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="#BDBABA"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/tvTopNews">
+
+        <ImageView
+            android:id="@+id/ivClose2"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/close"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnGeneral"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="General"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivClose2" />
+
+        <Button
+            android:id="@+id/btnWorld"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="World"
+            app:layout_constraintEnd_toStartOf="@+id/btnNation"
+            app:layout_constraintStart_toEndOf="@+id/btnGeneral"
+            app:layout_constraintTop_toTopOf="@+id/btnGeneral" />
+
+        <Button
+            android:id="@+id/btnNation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="Nation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btnWorld" />
+
+        <Button
+            android:id="@+id/btnBusiness"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Business"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnGeneral" />
+
+        <Button
+            android:id="@+id/btnTechnology"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Technology"
+            app:layout_constraintEnd_toStartOf="@+id/btnEntertainment"
+            app:layout_constraintStart_toEndOf="@+id/btnBusiness"
+            app:layout_constraintTop_toTopOf="@+id/btnBusiness" />
+
+        <Button
+            android:id="@+id/btnEntertainment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="Entertainment"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btnBusiness" />
+
+        <Button
+            android:id="@+id/btnSports"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Sports"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnBusiness" />
+
+        <Button
+            android:id="@+id/btnScience"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Science"
+            app:layout_constraintEnd_toStartOf="@+id/btnHealth"
+            app:layout_constraintStart_toEndOf="@+id/btnSports"
+            app:layout_constraintTop_toTopOf="@+id/btnSports" />
+
+        <Button
+            android:id="@+id/btnHealth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="Health"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btnSports" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/ivChangeTopic"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/change_topic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivFilter"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:src="@drawable/filter_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clFilter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="#BDBABA"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/clChangeTopic">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilCountry"
+            style="@style/CustomTextInputLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="12dp"
+            android:hint="Country"
+            android:textColorHint="@color/black"
+            app:boxStrokeColor="@color/black"
+            app:cursorColor="@color/black"
+            app:endIconMode="dropdown_menu"
+            app:endIconTint="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <AutoCompleteTextView
+                android:id="@+id/acCountry"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="4dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="16dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilLanguage"
+            style="@style/CustomTextInputLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            android:hint="Language"
+            android:textColorHint="@color/black"
+            app:boxStrokeColor="@color/black"
+            app:cursorColor="@color/black"
+            app:endIconMode="dropdown_menu"
+            app:endIconTint="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tilCountry">
+
+            <AutoCompleteTextView
+                android:id="@+id/acLanguage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="4dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="16dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tvMaxLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            android:text="Maximum Line:"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tilLanguage" />
+
+        <EditText
+            android:id="@+id/etMaxLine"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:inputType="number"
+            android:text="10"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvMaxLine"
+            app:layout_constraintStart_toEndOf="@+id/tvMaxLine"
+            app:layout_constraintTop_toTopOf="@id/tvMaxLine" />
+
+        <TextView
+            android:id="@+id/tvSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            android:text="Search :"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvMaxLine" />
+
+        <EditText
+            android:id="@+id/etSearch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvSearch"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvSearch"
+            app:layout_constraintTop_toTopOf="@id/tvSearch" />
+
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/close"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            android:text="Apply"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivClose" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clFilter" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
