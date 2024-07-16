@@ -58,8 +58,8 @@ dependencies {
     implementation("com.squareup.retrofit2:retrofit:2.11.0")
     implementation("com.squareup.retrofit2:converter-gson:2.11.0")
     implementation("com.squareup.okhttp3:okhttp:4.11.0")
-    implementation ("com.squareup.moshi:moshi-kotlin:1.9.3")
-    implementation ("com.squareup.retrofit2:converter-moshi:2.9.0")
+    implementation("com.squareup.moshi:moshi-kotlin:1.9.3")
+    implementation("com.squareup.retrofit2:converter-moshi:2.9.0")
 
     //Coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
@@ -67,11 +67,11 @@ dependencies {
 
     implementation("io.coil-kt:coil:2.4.0")
 
-    implementation ("com.makeramen:roundedimageview:2.3.0")
+    implementation("com.makeramen:roundedimageview:2.3.0")
 
     //Glide
-    implementation ("com.github.bumptech.glide:glide:4.16.0")
-    kapt ("com.github.bumptech.glide:compiler:4.16.0")
+    implementation("com.github.bumptech.glide:glide:4.16.0")
+    kapt("com.github.bumptech.glide:compiler:4.16.0")
 
     // Annotation processor
     kapt("androidx.lifecycle:lifecycle-compiler:2.8.2")
@@ -81,9 +81,9 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-extensions:2.2.0")
     implementation("androidx.lifecycle:lifecycle-common-java8:2.8.1")
     implementation("androidx.activity:activity-ktx:1.9.0")
-    implementation ("androidx.fragment:fragment-ktx:1.7.1")
+    implementation("androidx.fragment:fragment-ktx:1.7.1")
 
 
-    implementation ("com.google.android.material:material:1.12.0")
+    implementation("com.google.android.material:material:1.12.0")
 
 }
