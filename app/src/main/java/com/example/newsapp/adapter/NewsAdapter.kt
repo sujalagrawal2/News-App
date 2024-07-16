@@ -61,7 +61,7 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
         holder.binding.tvTitle.text = currentNews.title
         holder.binding.tvDescription.text = currentNews.description
         Glide.with(holder.itemView.context)
-            .load(currentNews.url)
+            .load(currentNews.image)
             .into(holder.binding.ivImage)
     }
 }
